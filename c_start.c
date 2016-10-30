@@ -30,7 +30,7 @@ int c_start() {
     j = 0;
     while(hello[i] != '\0') {
         buffer[j] = hello[i];
-        buffer[j+1] = 0x04; /* Red  */
+        buffer[j+1] = 0x02; /* Green */
         i++;
         j += 2;
     }
