@@ -1,7 +1,7 @@
-# <em>HYDROGEN</em>
+# *HYDROGEN*
 A bare-bones kernel that prints "Hello, World!" on the screen.  
 
-### <em>REQUIREMENTS</em>
+## *REQUIREMENTS*
 **1. QEMU:**  
     QEMU is a machine emulator and virtualizer.  
     Install it using: `$ sudo apt-get install qemu-system`
@@ -10,16 +10,16 @@ A bare-bones kernel that prints "Hello, World!" on the screen.
   NASM is an assembler and disassembler for the Intel x86 architecture.  
   Install it using: `$ sudo apt-get install nasm`
 
-### <em>BUILD INSTRUCTIONS</em>  
-* **Method 1** (_is automated, try Method 2 to get a more geeky feeling_):  
+## *BUILD INSTRUCTIONS*  
+### Method 1 (_is automated, try Method 2 to get a more geeky feeling_):  
   
   1. Build kernel executable: `./buildkernel.sh`  
   2. Place the kernel executable in the grub image: `./buildimage.sh`  
   3. Run the kernel: `./run.sh`  
 
-* **Method 2:**  
+### Method 2:  
 
-A) Build the kernel executable:
+#### Build the kernel executable:
   1. Use **NASM** to produce an object file of `entry.asm`.  
     * ``nasm -f elf32 entry.asm -o entry.o``  
     * `elf32` flag is used to produce a 32-bit ELF object file.
