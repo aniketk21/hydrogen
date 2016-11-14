@@ -1,10 +1,14 @@
 # *HYDROGEN*
 A bare-bones kernel that prints "Hello, World!" on the screen.  
 
+![screen](img/screen.png)
+
 ## *REQUIREMENTS*
 **1. QEMU:**  
     QEMU is a machine emulator and virtualizer.  
-    Install it using: `$ sudo apt-get install qemu-system`
+    Install it using:  
+    * Linux: `$ sudo apt-get install qemu-system`
+    * Mac OS: `brew install qemu`
 
 **2. NASM:**  
   NASM is an assembler and disassembler for the Intel x86 architecture.  
