@@ -7,8 +7,8 @@ A bare-bones kernel that prints "Hello, World!" on the screen.
 **1. QEMU:**  
     QEMU is a machine emulator and virtualizer.  
     Install it using:  
-    * Linux: `$ sudo apt-get install qemu-system`
-    * Mac OS: `brew install qemu`
+        1. Linux: `$ sudo apt-get install qemu-system`  
+        2. Mac OS: `brew install qemu`
 
 **2. NASM:**  
   NASM is an assembler and disassembler for the Intel x86 architecture.  
