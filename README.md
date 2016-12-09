@@ -38,6 +38,32 @@ A bare-bones kernel that prints "Hello, World!" on the screen.
       `any i386 system.`  
 
   3. Use **ld** (the GNU Linker) to link the above object files into a single executable (*hydrogen*).
-    * `ld -m elf_i386 -T link.ld -o hydrogen c_start.o entry.o`
+    * ``ld -m elf_i386 -T link.ld -o hydrogen c_start.o entry.o``
     * `elf_i386` flag is used to emulate the elf_i386 linker.
     * `link.ld` is a linker template file.
+
+#### Modify the grub image:  
+##### 1. Setup `grub.img` as a loop device:
+    sudo losetup /dev/loop0 references/grub.img  
+
+##### 2. Create a directory in the `mnt` folder:
+    sudo mkdir /mnt/sos
+
+##### 3. Mount the `sos` directory at `/dev/loop0`:
+    sudo mount /dev/loop0 /mnt/sos
+
+##### 4. Copy kernel executable to `/mnt/sos/SOS`:
+    sudo cp hydrogen /mnt/sos/SOS
+
+##### 5. Synchronize data on disk with memory:
+    sudo sync
+
+##### 6. Unmount loop device:
+    sudo umount /dev/loop0
+  
+##### 7. Delete loop:
+    sudo losetup -d /dev/loop0
+
+#### Run:
+##### `qemu-system-i386 -fda references/grub.img`  
+  * `-fda` option tells qemu to use grub.img as a floppy disk image.
